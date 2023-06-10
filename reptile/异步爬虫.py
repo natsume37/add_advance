@@ -40,11 +40,13 @@ async def get(url):
     await session.close()
     return response
 
+
 async def request():
     url = "https://www.httpbin.org/delay/5"
-    print('waiting',url)
+    print('waiting', url)
     response = await get(url)
-    print("获取结果", url,"response",response)
+    print("获取结果", url, "response", response)
+
 
 tasks = [
     asyncio.ensure_future(request()) for _ in range(10)
@@ -54,4 +56,3 @@ loop.run_until_complete(asyncio.wait(tasks))
 
 end = time.time()
 print(end - stat)
-

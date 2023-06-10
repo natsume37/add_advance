@@ -52,5 +52,6 @@ LOGGING_DIC = {
 # 使用配置字典
 if __name__ == '__main__':
     logging.config.dictConfig(LOGGING_DIC)  # 自动加载字典中的配置
-    logger1 = logging.getLogger('xxx')
-    logger1.debug('好好的 不要浮躁 努力就有收获')
+    for i in range(1000):
+        logger1 = logging.getLogger('xxx')
+        logger1.debug('好好的 不要浮躁 努力就有收获')
